@@ -1,7 +1,14 @@
+import React from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-
+import api from 'axios'
 export default function Home() {
+ React.useEffect(() => {
+    api.get('http://integracao.health4pet.com.br/IntegracoesH4P/servico/volServices/externo/cep/06253040')
+    .then(r => console.log(r))
+    .catch(e => console.log(e))
+ }, [])
+
   return (
     <div className={styles.container}>
       <Head>
