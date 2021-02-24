@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import api from 'axios'
 export default function Home() {
  React.useEffect(() => {
-    api.get('https://c6abd83a6c84.ngrok.io/IntegracoesH4P/servico/volServices/externo/cep/06253040')
+    api.get('')
     .then(r => console.log(r))
     .catch(e => console.log(e))
  }, [])
